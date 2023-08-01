@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Log in! - Chat App</p>
+    <form name="login" method="post" action="{{ url_for('profile_user', username=username) }}">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password">
+        </div>
+        <div>
+            <button name="sign-in" type="submit">Sign in</button>
+            <a href="/register">Register</a>
+        </div>
+        <div>
+            <!-- <input type="hidden" id="check" name="check" value="sign-in"> -->
+        </div>
+    </form>
+
+</body>
+</html>

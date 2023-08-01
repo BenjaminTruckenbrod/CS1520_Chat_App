@@ -1,0 +1,11 @@
+form {
+    display: block;
+}
+
+#chat_history{
+    height:500px;
+    width:300px;
+    border:1px solid #ccc;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+}

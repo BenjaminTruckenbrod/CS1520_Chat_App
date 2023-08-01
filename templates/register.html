@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Document</title>
+</head>
+<body>
+    <p>Register - Chat App</p>
+
+    <form name="registration" method="post" action="{{ url_for('profile_user', username=username) }}">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="text" id="password" name="password">
+        </div>
+        <div>
+            <label for="password2">Retype Password: </label>
+            <input type="text" id="password2" name="password2">
+        </div>
+        <div><button type="submit" name="register" id="register">Register</button></div>
+        
+
+    </form>
+</body>
+</html>
