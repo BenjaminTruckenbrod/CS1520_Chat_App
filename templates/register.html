@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'basePage.html' %}
+{% block head %}
+    <title>Register</title>
+{% endblock %}
+
+{% block body %}
     <p>Register - Chat App</p>
 
     <form name="registration" method="post" action="{{ url_for('profile_user', username=username) }}">
@@ -30,5 +27,4 @@
         
 
     </form>
-</body>
-</html>
+{% endblock %}

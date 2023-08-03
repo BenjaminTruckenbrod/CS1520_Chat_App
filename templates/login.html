@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'basePage.html' %}
+{% block head %}
+    <title>Login page</title>
+{% endblock %}
+{% block body %}
     <p>Log in! - Chat App</p>
     <form name="login" method="post" action="{{ url_for('profile_user', username=username) }}">
         <div>
@@ -24,6 +21,4 @@
             <!-- <input type="hidden" id="check" name="check" value="sign-in"> -->
         </div>
     </form>
-
-</body>
-</html>
+{% endblock %}

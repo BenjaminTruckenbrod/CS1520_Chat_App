@@ -1,25 +1,24 @@
-from sqlalchemy import Column, String, Integer, Date
+from sqlalchemy import Column, String, Integer, DateTime
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.sql import func
 
 Base = declarative_base()
 
-# db = SQLAlchemy()
+class ChatHistory(Base):
 
+    __tablename__ = "ChatHistory"
 
-# class ChatHistory(Base):
+    id = Column("id", Integer, primary_key=True, autoincrement=True)
+    author = Column("author", String, nullable=False)
+    message = Column("message", String, nullable=False)
+    # timestamp = Column(DateTime, default=func.now())
 
-#     __tablename__ = "ChatHistory"
+    def __int__(self, author, message):
+        self.content = author
+        self.content = message
 
-#     id = Column("id", Integer, primary_key=True, autoincrement=True)
-#     author = Column("author", String, nullable=False)
-#     chat = Column("chat", String, nullable=False)
-
-#     def __int__(self, author, chat):
-#         self.content = author
-#         self.content = chat
-
-#     def __repr__(self):
-#         return f"({self.id} {self.author} {self.chat})"
+    def __repr__(self):
+        return f"({self.id} {self.author} {self.message})"
     
 class RegisteredUser(Base):
     __tablename__ = "RegisteredUsers"

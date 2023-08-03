@@ -2,10 +2,11 @@ form {
     display: block;
 }
 
-#chat_history{
+#chat-history{
     height:500px;
     width:300px;
-    border:1px solid #ccc;
+    border:1px solid #4c4c4c;
     font:16px/26px Georgia, Garamond, Serif;
+    padding: 3px;
     overflow:auto;
 }
